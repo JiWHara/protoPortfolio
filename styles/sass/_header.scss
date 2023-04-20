@@ -1,5 +1,54 @@
 @use './variables' as *;
 
+.headerWrapper {
+    position:relative;
+}
+.headerList {
+    list-style: none;
+    width:25%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 nav {
-    display:block;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    width:100%;
+    height:auto;
+    display:flex;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    color:white;
+    justify-content: space-between;
+}
+.headerName{
+    display:inline-block;
+    position: absolute;
+    top:40%;
+    left: 20%;
+    color:white;
+    font-family: "pixelFont", sans-serif;
+    font-weight: 200;
+}
+h1{
+    font-family: "handwritten", sans-serif;
+}
+a {
+    text-decoration: none;
+    color:white;
+}
+.name {
+    font-weight: 200;
+    font-size: 2.6rem;
+}
+ul.headerList li a {
+    font-family: "handwritten", sans-serif;
+}
+.earth {
+    position: absolute;
+    top:40%;
+    left: 60%;
+    height: 15vw;
+    width: 0 auto;
 }

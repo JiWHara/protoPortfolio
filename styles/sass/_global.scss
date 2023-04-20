@@ -1,8 +1,24 @@
-body {
-    background: #060e1b;
-    overflow: hidden;
+html{
+    overflow-x: hidden;
+    text-decoration: none;
+    max-width: 100vw;
+    font-size: 20px;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 0 auto;
+}
+canvas {
+    // opacity: 0.5;
+    width: 100%;
+    height:100%;
   }
-  
-  canvas {
-    //opacity: 0.5;
-  }
+  @font-face {
+    font-family: pixelFont;
+    src: url(/assets/VCR_OSD_MONO_1.001.ttf);
+}
+@font-face {
+    font-family: handwritten;
+    src: url(/assets/handwritten.ttf);
+}

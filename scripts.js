@@ -11,7 +11,7 @@ for (let i = 0; i < numStars; i++) {
   stars.push({
     x: Math.random() * width,
     y: Math.random() * height,
-    size: Math.random() < 0.9 ? 1 : 2 + Math.random() * 1.5,
+    size: Math.random() < 0.9 ? 1 : 1 + Math.random() * 1,
     speed: Math.random() + 0.2,
     blink: Math.random() * 10,
     twinkle: Math.random() < 0.5
@@ -19,7 +19,7 @@ for (let i = 0; i < numStars; i++) {
 }
 
 // Set up the background
-const bgColor = '#000d1a';
+const bgColor = '#000308';
 const glowColor = 'rgba(173, 216, 230, 0.5)';
 ctx.fillStyle = bgColor;
 ctx.fillRect(0, 0, width, height);
@@ -30,13 +30,13 @@ function drawStars() {
     const star = stars[i];
     if (star.blink < 0) {
       star.twinkle = Math.random() < 0.5;
-      star.blink = Math.random() * 10;
+      star.blink = Math.random() * 5;
     }
     star.blink--;
     if (star.twinkle) {
       ctx.fillStyle = glowColor;
       ctx.beginPath();
-      ctx.arc(star.x, star.y, star.size * 1.5, 0, Math.PI * 2);
+      ctx.arc(star.x, star.y, star.size * 1.2, 0, Math.PI * 2);
       ctx.fill();
     }
     ctx.fillStyle = '#ADD8E6';
